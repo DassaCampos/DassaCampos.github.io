@@ -1,1 +1,213 @@
 
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    .menu a {
+      background-color:darkgray;
+      padding: 8px;
+      margin-top: 7px;
+      display: block;
+      width: 100%;
+      color: black;
+    }
+
+    .main {
+      float: center;
+      width: 80%;
+      padding: 0 20px;
+      background-color:darkgray;
+color: black;
+    }
+.round2 {
+  border: 2px solid black;
+  border-radius: 8px;
+  background-color: darkgray;
+  padding-top: 30px;
+  padding-right: 30px;
+  padding-bottom: 30px;
+  padding-left: 30px;
+    }
+.round3 {
+  border: 2px solid black;
+  border-radius: 8px;
+  background-color: darkgray;
+  padding-top: 10px;
+  padding-right: 50px;
+  padding-bottom: 10px;
+  padding-left: 50px;
+  position: relative;
+}
+div.gallery {
+  margin: 5px;
+  border: 1px solid #ccc;
+  float: left;
+  width: 180px;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+
+#nome{
+  margin-left: 700px;
+}
+
+#senha{
+  margin-left: 700px;
+
+
+}
+  </style>
+</head>
+<script>
+$(document).ready(function (e) {
+        $("#teste").hide();
+
+        $("#bt2").click(function (e) {
+            $("#teste").slideToggle(800);
+        });
+    });
+$(document).ready(function (e) {
+        $("#test1").hide();
+
+        $("#bt1").click(function (e) {
+            $("#test1").slideToggle(800);
+        });
+    });
+
+$(document).ready(function(){
+
+  $('#meuFormulario').on('submit', function(e){
+          e.preventDefault();
+          var nome = $('#nome').val().length;
+          var senha = $('#senha').val().length;
+          if (nome > 0 && senha > 0) {
+              localStorage.setItem("nome", $('#nome').val());
+              localStorage.setItem("senha", $('#senha').val());
+              this.submit();
+          }else{
+            alert("É obrigatório preencher Login e Senha!")
+          }
+      });
+
+  });
+
+</script>
+
+<body style="font-family:Verdana;color:#4F4F4F; background-color:darkgray;">
+
+  <div style="background-color:darkgray;padding:5px;text-align:left;">
+<h1 class="round2"; style="color:black";>Série Bones</h1>
+  </div>
+<br>
+<br>
+<br>
+
+    <div class="main">
+
+    <p>A série "Bones" gira em torno da Dra. Temperance Brennan, uma exímia antropóloga forense que trabalha no Instituto Jeffersonian, em Washington, junto ao FBI, e cujo passatempo é escrever romances policiais. Ela é chamada para ajudar nas investigações policiais de assassinato sempre que não é possível identificar a vítima pelos métodos tradicionais, seja porque o corpo está decomposto, foi carbonizado ou está totalmente desfigurado. O talento e a experiência de Brennan recaem em sua grande habilidade de desvendar as pistas ocultas que se escondem por trás do cadáver e/ou ossada das vitimas.O Agente Especial Seeley Both, arrogante porém charmoso, é quem trabalha com ela dentro da Agência de Investigação. A série explora, assim, além dos casos de assassinatos, as origens das relações entre os personagens e uma amizade - e possível romance - entre Booth e Brennan.</p>
+<p><a href="https://www.thenightseries.com/bones/">Assistir Bones</a></p>
+</div>
+
+<br>
+<button id="bt2" type="button"  class="round3" style="float: left;" ><b>Personagens</b></button>
+<div id="teste"><br>
+
+  <div class="gallery">
+    <a target="_blank" href="images/Seeleybobo.JPG">
+      <img src="images/Seeleybobo.JPG" alt="Cinque Terre" width="600" height="400">
+    </a>
+    <div class="desc">Agente especial Seeley Both</div>
+  </div>
+
+  <div class="gallery">
+    <a target="_blank" href="images/Temperance_Brennan.jpg">
+      <img src="images/Temperance_Brennan.jpg" alt="Forest" width="600" height="400">
+    </a>
+    <div class="desc">Dr. Temperance Brennan</div>
+  </div>
+
+  <div class="gallery">
+    <a target="_blank" href="images/Angelamontenegro.jpg">
+      <img src="images/Angelamontenegro.jpg" alt="Northern Lights" width="600" height="400">
+    </a>
+    <div class="desc">Angela Montenegro</div>
+  </div>
+
+  <div class="gallery">
+    <a target="_blank" href="images/8780245544f31bc640785ad87712c2bb.jpg">
+      <img src="images/8780245544f31bc640785ad87712c2bb.jpg" alt="Mountains" width="600" height="400">
+    </a>
+    <div class="desc">Jack Hodgins</div>
+  </div>
+
+  <div class="gallery">
+    <a target="_blank" href="images/Zack_Addy.jpg">
+      <img src="images/Zack_Addy.jpg" alt="Northern Lights" width="600" height="400">
+    </a>
+    <div class="desc">Zack</div>
+  </div>
+
+  <div class="gallery">
+    <a target="_blank" href="images/Bg_12-grey-tamara_1539_jm_hires1.jpg">
+      <img src="images/Bg_12-grey-tamara_1539_jm_hires1.jpg" alt="Mountains" width="600" height="400">
+    </a>
+    <div class="desc">Cam</div>
+  </div>
+  <div class="gallery">
+    <a target="_blank" href="images/bccaceac2ae64d7fedb2e255c163d0b9.jpg">
+      <img src="images/bccaceac2ae64d7fedb2e255c163d0b9.jpg" alt="Mountains" width="600" height="400">
+    </a>
+    <div class="desc">Lance Sweets</div>
+  </div>
+</div>
+</br></br>
+</br></br>
+
+ <div class="formulario">
+  <form id="meuFormulario" action="pagina2.html">
+  <h3 style="text-align: center; color:black;">Login: </h3>
+  <input type="text" name="nome" value="" id="nome">
+ <h3 style="text-align: center; color:black;">Senha: </h3>
+  <input type="password" name="senha" value="" id="senha">
+
+  <br><br>
+  <br><br>
+  <input type="submit" value="Enviar" id="botao"
+style="width: 100%;
+  height: 40px;
+  background-color: Black;
+  color: white;
+  font-size: 15pt;">
+
+  </form>
+</br></br>
+
+     </div>
+
+<div style="background-color:lightgray;text-align:center;padding:5px;margin-top:7px;font-size:11px;"> Login é "Dassa" Senha é "Bones"</div>
+
+
+</body>
+
+</html>
