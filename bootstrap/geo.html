@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <title>Série Bones</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script>
+
+    $(document).ready(function() {
+
+
+
+      $('#form1').on('submit', function(e) {
+
+        e.preventDefault();
+
+
+
+        var api_url = 'https://api.linkpreview.net'
+
+        var key = '5cd33ddbb0ff4461d2e7724268fab716cf630d9419bf1' // real
+
+        $.ajax({
+
+          url: api_url + "?key=" + key + "&q=" + $("#endereco").val(),
+
+          contentType: "application/json",
+
+          dataType: 'json',
+
+          success: function(result) {
+
+            $("#p1").text(result.title);
+
+            $("#p2").text(result.description);
+
+            $('#p3').attr('src', result.image);
+
+            $("#p4").text(result.url);
+
+          }
+
+        });
+
+
+
+      });
+
+
+
+    });
+
+  </script>
+
+
+  <link rel="stylesheet" href="https://cdn.rawgit.com/openlayers/openlayers.github.io/master/en/v5.3.0/css/ol.css" type="text/css">
+<style>
+      .map {
+        height: 400px;
+        width: 100%;
+      }
+    </style>
+    <script src="https://cdn.rawgit.com/openlayers/openlayers.github.io/master/en/v5.3.0/build/ol.js"></script>
+
+  <style>
+  .fakeimg {
+    height: 200px;
+    background: #aaa;
+  }
+body {
+    background-color: black;
+}
+h2 {
+    color: white;
+}
+h3 {
+    color: white;
+}
+p {
+    color: #CDC9C9;
+}
+b {
+    color: red;
+}
+.jumbotron{
+    background-color:#4F4F4F;
+    text-align:center;
+    color: Black;
+}
+  </style>
+</head>
+<body>
+<div class="jumbotron" style="margin-bottom:0";>
+  <h1 style="font-size: 80px";>Série Bones</h1>
+</div>
+
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <a class="navbar-brand" href="file:///C:/Users/ext_hmarques/Desktop/cv/index.html">Início</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="https://www.thenightseries.com/bones/">Assistir</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="http://tudosobreseries.comunidades.net/tudo-sobre-bones">Saiba mais</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<div class="container" style="margin-top:30px">
+  <div class="row">
+    <div class="col-sm-4">
+      <h2>Sobre mim</h2>
+      <div><p><img src= "images/P_20190413_154006_p.jpg" width="300" height="300"></div>
+      <p>Olá, meu nome é Hadassa tenho 18 anos e amo a série Bones, por causa da série, eu comecei a gostar de antropologia e de psicologia. Eu criei essa Fanpage, para fazer com que mais pessoas assistam essa série.</p>
+      <h3>Redes Sociais</h3>
+      <ul class="nav nav-pills flex-column">
+        <li class="nav-item">
+          <a class="nav-link" href="https://www.instagram.com/">Instagram</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/login">Github</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://www.linkedin.com/uas/login">Linkedin</a>
+        </li>
+      </ul>
+      <hr class="d-sm-none">
+    </div>
+    <div class="col-sm-8">
+      <h2>Sinopse</h2>
+      <div><p><img src= "images/Series-Bones-Fox.jpg" width="750" height="400"></div>
+      <p>A antropóloga forense Dra. Temperance Brennan (Emily Deschanel) trabalha no "Jeffersoninan Institute", em Washington. Junto ao FBI, ela acompanha investigações de casos de assassinatos envolvendo restos mortais das vítimas, especialmente seus ossos. O Agente Especial Seeley Both (David Boreanaz), arrogante porém charmoso, é quem trabalha com ela dentro da Agência de Investigação. A série explora, assim, além dos casos de assassinatos, as origens das relações entre os personagens e uma amizade - e possível romance - entre Booth e Brennan.</p>
+      <br>
+      <h2>Curiosidades</h2>
+      <div><p><img src= "images/curiosidades_bones.jpg" width="750" height="400"></div>
+      <b>Troca de Papéis</b>
+<br>
+<p>Temperance Brennan é uma antropóloga que, durante o seu tempo livre, escreve sobre a personagem Kathy Reichs. Na vida real, Kathy Reichs é uma antropóloga que. durante seu tempo livre, escreve sobre a personagem Temperance Brennan.
+<br><br>
+<b>Brincando com a Realidade</b>
+<br>
+Não existe, na verdade, nenhum Jeffersoninan Institute em Washington. O nome, provavelmente, é uma brincadeira com o Smithsonian Institute, que inclusive aparece em algumas cenas da série.
+<br><br>
+<b>Nomes Conhecidos</b>
+<br>
+Daisy Wick é o nome de um personagem secundário da série. Daisy Wick também é o nome da vítima de um assassinato em Battle Creek, Michigan, em 1963. O crime continua sem solução.
+<br><br>
+<b>Tão Boa Quanto Ela Mesma</b>
+<br>
+Durante o episódio piloto, Brennan menciona que a próxima antropóloga forense que chega perto de suas habilidades é de Montreal. Montreal é onde originalmente se passa a história dos Livros escritos por Kathy Reichs. </p>
+    </div>
+  </div>
+</div>
+</br></br>
+
+
+  <form name="form1" id="form1" style="text-align:center;">
+    URL:
+    <input type="text" id="endereco" name="endereco">
+
+    <br> </br>
+
+    <div class="container">
+
+    <input type="submit" value="ENVIAR" data-toggle="modal" data-target="#myModal2" class="btn btn-primary" >
+
+    <div class="modal fade" id="myModal2" role="dialog">
+       <div class="modal-dialog modal-sm">
+         <div class="modal-content">
+           <div class="modal-header">
+             <button type="button" class="close" data-dismiss="modal">&times;</button>
+             <h4 class="modal-title" style="color:black"> </h4>
+           </div>
+           <div class="modal-body">
+
+               <p id="p1"></p>
+
+             <p id="p2"></p>
+
+             <img id="p3" src="" />
+
+             <p id="p4"></p>
+             </center>
+           </div>
+         </div>
+       </div>
+     </div>
+   </div>
+
+ </form>
+</br></br>
+<div class="col-sm-12">
+
+
+      <h5>Site de Geolocalização</h5>
+
+
+      <div id="map" class="map"></div>
+
+      <br><br>
+
+      <br><br>
+
+
+      <button type="button" id="bt2">Pegue Minhas coordenadas</button>
+
+      <br>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+
+
+
+
+<script>
+
+  $(document).ready(function() {
+
+
+
+    var minhaview = new ol.View({
+
+      center: ol.proj.fromLonLat([-46.5976273,  -23.5519444]),
+
+      zoom: 16
+
+    });
+
+
+
+    var map = new ol.Map({
+
+      target: 'map',
+
+      layers: [
+
+        new ol.layer.Tile({
+
+          source: new ol.source.OSM()
+
+        })
+
+      ],
+
+      view: minhaview
+
+    });
+
+
+
+
+
+    $("#bt2").click(function() {
+
+      getLocation();
+
+    });
+
+
+
+    function getLocation() {
+
+      if (navigator.geolocation) {
+
+        navigator.geolocation.getCurrentPosition(showPosition);
+
+      } else {
+
+        alert("Geolocation is not supported by this browser.");
+
+      }
+
+    }
+
+
+
+    function showPosition(position) {
+
+
+
+        minhaview.animate({
+
+          center: ol.proj.fromLonLat([ position.coords.longitude, position.coords.latitude,]),
+
+          duration: 6000
+
+        });
+
+    }
+
+
+
+
+
+  });
+
+</script>
+</body>
+</html>
